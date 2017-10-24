@@ -31,7 +31,7 @@
         </TextBox>
         <Button x:Name="SendButton" Content="Send" Margin="0,0,67.2,3.8" VerticalAlignment="Bottom" Click="SendButton_Click" HorizontalAlignment="Right" Width="88" Grid.ColumnSpan="2" Grid.Column="1"/>
         <TextBox x:Name="MessageTextBox" Height="8" TextWrapping="Wrap" VerticalAlignment="Bottom" Margin="10,0,0,3.8" KeyDown="MessageTextBox_KeyDown"/>
-        <Label x:Name="welcomelabel" Content="" Height="38" Margin="364,10,42.2,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="3"/>
+        <Label x:Name="welcomelabel" Content="" Height="38" Margin="364,10,42.2,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="3" Foreground="White"/>
         <ListBox x:Name="UserListBox" Margin="24,82,10.2,38.8" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Label Content="Users:" HorizontalAlignment="Right" Margin="0,53,22.2,0" VerticalAlignment="Top" Width="54" Grid.Column="1"/>
     </Grid>
