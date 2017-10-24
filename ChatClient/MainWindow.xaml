@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
         Title="MainWindow" Height="410" Width="596.2" Closing="Window_Closing" Foreground="Black" Background="#FFDBDBDB">
+    <Window.Background>
+        <ImageBrush
+            ImageSource="~/images/">
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="383*"/>
@@ -27,6 +31,5 @@
         <Label x:Name="welcomelabel" Content="" Height="38" Margin="364,10,42.2,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="3"/>
         <ListBox x:Name="UserListBox" Margin="24,82,10.2,38.8" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Label Content="Users:" HorizontalAlignment="Right" Margin="0,53,22.2,0" VerticalAlignment="Top" Width="54" Grid.Column="1"/>
-
-    </Grid>
+        </Grid>
 </Window>
