@@ -6,10 +6,6 @@
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
         Title="MainWindow" Height="410" Width="596.2" Closing="Window_Closing" Foreground="Black" Background="#FFDBDBDB">
-    <Window.Background>
-        <ImageBrush
-            ImageSource="~/images/">
-    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="383*"/>
