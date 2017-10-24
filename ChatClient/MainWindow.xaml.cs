@@ -59,7 +59,7 @@ namespace ChatClient
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            if (UsernameTextbox.Text != null)
+            if (UsernameTextbox.Text.Length > 0)
             {
                 int returnValue = server.Login(UsernameTextbox.Text);
                 if (returnValue == 1)
