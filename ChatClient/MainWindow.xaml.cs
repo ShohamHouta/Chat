@@ -59,19 +59,26 @@ namespace ChatClient
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            int returnValue = server.Login(UsernameTextbox.Text);
-            if (returnValue == 1)
+            if (UsernameTextbox.Text != null)
             {
-                MessageBox.Show("You are already logged in. Try again");
-            }
-            else if (returnValue == 0)
-            {
+                int returnValue = server.Login(UsernameTextbox.Text);
+                if (returnValue == 1)
+                {
+                    MessageBox.Show("You are already logged in. Try again");
+                }
+                else if (returnValue == 0)
+                {
 
-                LoadUserList(server.GetCurrentUsers());
-                MessageBox.Show("You logged in!");
-                welcomelabel.Content = "Welcome " + UsernameTextbox.Text + "!";
-                UsernameTextbox.IsEnabled = false;
-                LoginButton.IsEnabled = false;
+                    LoadUserList(server.GetCurrentUsers());
+                    MessageBox.Show("You logged in!");
+                    welcomelabel.Content = "Welcome " + UsernameTextbox.Text + "!";
+                    UsernameTextbox.IsEnabled = false;
+                    LoginButton.IsEnabled = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Login First!");
             }
         }
 
