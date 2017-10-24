@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="410" Width="596.2" Closing="Window_Closing" Foreground="Black" Background="#FFDBDBDB">
     <Grid>
+        <Grid.Background>
+            <ImageBrush
+                ImageSource="C:\Users\Shoham Houta\Documents\Visual Studio 2017\Projects\Chat\ChatClient\image\images.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="383*"/>
             <ColumnDefinition Width="100*"/>
@@ -14,7 +18,10 @@
         </Grid.ColumnDefinitions>
         <Button x:Name="LoginButton" Content="Login" Margin="188,14,111,0" VerticalAlignment="Top" Click="LoginButton_Click"/>
         <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Margin="10,14,0,0"/>
-        <TextBox x:Name="MessagesBox" Margin="10,53,0,37.8" IsReadOnly="True" Background="White" Foreground="Black" Style="{DynamicResource TextBoxStyle}">
+        <TextBox x:Name="MessagesBox" Margin="10,53,0,37.8" IsReadOnly="True" Foreground="White" Style="{DynamicResource TextBoxStyle}">
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\Shoham Houta\Documents\Visual Studio 2017\Projects\Chat\ChatClient\image\images.jpg"/>
+            </TextBox.Background>
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF5AEAFF" Offset="1"/>
@@ -27,5 +34,5 @@
         <Label x:Name="welcomelabel" Content="" Height="38" Margin="364,10,42.2,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="3"/>
         <ListBox x:Name="UserListBox" Margin="24,82,10.2,38.8" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Label Content="Users:" HorizontalAlignment="Right" Margin="0,53,22.2,0" VerticalAlignment="Top" Width="54" Grid.Column="1"/>
-        </Grid>
+    </Grid>
 </Window>
