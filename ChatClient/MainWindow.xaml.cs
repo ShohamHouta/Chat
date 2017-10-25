@@ -116,16 +116,12 @@ namespace ChatClient
             }
         }
 
-        private void RgisterButton_Click(object sender, RoutedEventArgs e)
+
+        private void RgisterButton_Click_1(object sender, RoutedEventArgs e)
         {
             Register register = new Register();
-            bool? result = register.ShowDialog();
 
-            if(result.HasValue == result.Value)
-            {
-
-            }
-            
+               register.ShowDialog();
         }
     }
 }

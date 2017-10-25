@@ -42,7 +42,7 @@
                     <PasswordBox x:Name="PasswordTextBox" Height="27.4"  Margin="227.008,0,89.6,130.198" VerticalAlignment="Bottom"/>
                     <Label Content="Password:" Foreground="White" FontSize="18" Margin="126.058,0,0,130.198" Height="33.6" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="95.95"/>
                     <Button x:Name="LoginButton" Content="Login" Height="26.4" Margin="227,0,208,70.8" VerticalAlignment="Bottom" Click="LoginButton_Click_1"/>
-                    <Button x:Name="RgisterButton" Content="Register" Height="30" Margin="345,0,90,70.8" VerticalAlignment="Bottom" RenderTransformOrigin="0.501,0.5"/>
+                    <Button x:Name="RgisterButton" Content="Register" Height="30" Margin="345,0,90,70.8" VerticalAlignment="Bottom" RenderTransformOrigin="0.501,0.5" Click="RgisterButton_Click_1"/>
                 </Grid>
             </Border>
         </DockPanel>
