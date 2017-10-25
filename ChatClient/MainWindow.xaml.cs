@@ -50,14 +50,14 @@ namespace ChatClient
                 TakeMessage(MessageTextBox.Text, "You");
                 MessageTextBox.Text = "";
             }
-            else if (LoginButton.IsEnabled ==true)
+            else if (LoginButton.IsEnabled == true)
             {
                 MessageBox.Show("Please Login First.");
             }
-           
+
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void LoginButton_Click_1(object sender, RoutedEventArgs e)
         {
             if (UsernameTextBox.Text.Length > 0)
             {
@@ -71,7 +71,8 @@ namespace ChatClient
 
                     LoadUserList(server.GetCurrentUsers());
                     MessageBox.Show("You logged in!");
-                    panel.Visibility = Visibility.Hidden;                  
+                    panel.Visibility = Visibility.Hidden;
+                    LoginButton.IsEnabled = false;
                 }
             }
             else
@@ -113,6 +114,18 @@ namespace ChatClient
             {
                 AddUserToList(user);
             }
+        }
+
+        private void RgisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            Register register = new Register();
+            bool? result = register.ShowDialog();
+
+            if(result.HasValue == result.Value)
+            {
+
+            }
+            
         }
     }
 }
