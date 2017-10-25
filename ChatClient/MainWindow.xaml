@@ -32,9 +32,17 @@
         <TextBox x:Name="MessageTextBox" Height="29" TextWrapping="Wrap" VerticalAlignment="Bottom" Margin="10,0,0,3.8" KeyDown="MessageTextBox_KeyDown"/>
         <ListBox x:Name="UserListBox" Margin="24,55.89,10.2,38.8" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Label Content="Users:" HorizontalAlignment="Right" Margin="0,24,22.2,0" VerticalAlignment="Top" Width="54" Grid.Column="1" Foreground="White" Height="30.497"/>
-        <DockPanel LastChildFill="False" Grid.ColumnSpan="3" Background="#FF003352" d:IsHidden="True">
+        <DockPanel x:Name="panel" LastChildFill="False" Grid.ColumnSpan="3" Background="#FF003352" d:IsHidden="False">
             <Border Background="#7F000000" CornerRadius="40" Grid.ColumnSpan="3" Width="547.95" Margin="20" >
-                <Label Content="Login" Foreground="White" FontSize="36" Height="62.2" Margin="223.4,21.2,219,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                <Grid>
+
+                    <Label Content="Login" Foreground="White" FontSize="36" Height="57.8" Margin="227.008,21.2,222.608,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <Label Content="Username:" Foreground="White" FontSize="18" Margin="126.058,125.402,0,0" Height="33.6" VerticalAlignment="Top" HorizontalAlignment="Left" Width="95.95"/>
+                    <TextBox x:Name="UsernameTextBox" Height="27.4" TextWrapping="Wrap" Margin="227.008,129.999,89.6,0" VerticalAlignment="Top"/>
+                    <Label Content="Password:" Foreground="White" FontSize="18" Margin="126.058,0,0,130.198" Height="33.6" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="95.95"/>
+                    <TextBox x:Name="PasswordTextBox" Height="27.4" TextWrapping="Wrap" Margin="227.008,0,89.6,131.801" VerticalAlignment="Bottom"/>
+                    <Button x:Name="LoginButton" Content="Login" Height="26.4" Margin="227.008,0,125.342,67.6" VerticalAlignment="Bottom"/>
+                </Grid>
             </Border>
         </DockPanel>
     </Grid>

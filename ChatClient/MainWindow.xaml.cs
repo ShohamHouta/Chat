@@ -46,7 +46,7 @@ namespace ChatClient
 
             if (LoginButton.IsEnabled == false)
             {
-                server.SentToAll(MessageTextBox.Text, UsernameTextbox.Text);
+                server.SentToAll(MessageTextBox.Text, UsernameTextBox.Text);
                 TakeMessage(MessageTextBox.Text, "You");
                 MessageTextBox.Text = "";
             }
@@ -59,9 +59,9 @@ namespace ChatClient
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            if (UsernameTextbox.Text.Length > 0)
+            if (UsernameTextBox.Text.Length > 0)
             {
-                int returnValue = server.Login(UsernameTextbox.Text);
+                int returnValue = server.Login(UsernameTextBox.Text);
                 if (returnValue == 1)
                 {
                     MessageBox.Show("You are already logged in. Try again");
@@ -71,9 +71,7 @@ namespace ChatClient
 
                     LoadUserList(server.GetCurrentUsers());
                     MessageBox.Show("You logged in!");
-                    welcomelabel.Content = "Welcome " + UsernameTextbox.Text + "!";
-                    UsernameTextbox.IsEnabled = false;
-                    LoginButton.IsEnabled = false;
+                    panel.Visibility = Visibility.Hidden;                  
                 }
             }
             else
