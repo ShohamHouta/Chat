@@ -121,7 +121,7 @@ namespace ChatClient
         {
             Register register = new Register();
 
-               register.ShowDialog();
+               register.Show();
         }
     }
 }

@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using Microsoft.Win32;
+using ChatInterfaces;
+using System.ServiceModel;
 
 namespace ChatClient
 {
@@ -21,38 +23,32 @@ namespace ChatClient
     /// </summary>
     public partial class Register : Window
     {
-        SqlConnection conn;
-        SqlCommand CMD;
+        public static IChattingService server;
+        private static DuplexChannelFactory<IChattingService> _channelFactory;
+
         public Register()
         {
             InitializeComponent();
-            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\App_Data\Chat_DataBase.mdf;Integrated Security=True");
+            _channelFactory = new DuplexChannelFactory<IChattingService>(new ClientCallback(), "ChatServiceEndPoint");
+            server = _channelFactory.CreateChannel();
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            conn.Open();
+           
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            try
-            {
-                string Insert = "INSERT [dbo].[USERS](Username,Password,First_Name,Last_Name,Birthday) values (@Username,@Password,@First_Name,@Last_Name,@Birthday)";
-                CMD = new SqlCommand(Insert, conn);
-                CMD.Parameters.AddWithValue("@Username", UsernameTextBox.Text);
-                CMD.Parameters.AddWithValue("@Password", PasswordTextBox.Text);
-                CMD.Parameters.AddWithValue("@First_Name", FirstNameTextBox.Text);
-                CMD.Parameters.AddWithValue("@Last_Name", LastNameTextBox.Text);
-                CMD.Parameters.AddWithValue("@Birthday", Birthday.SelectedDate);
-                CMD.ExecuteNonQuery();
-                Close();
-            }catch(Exception ex)
+            try {
+                server.AddUser(FirstNameTextBox.Text.ToString(), LastNameTextBox.Text.ToString(), UsernameTextBox.Text.ToString(), PasswordTextBox.Text.ToString(), Birthday.SelectedDate.Value);
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+            }
 
      
     }

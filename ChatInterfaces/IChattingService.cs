@@ -19,5 +19,7 @@ namespace ChatInterfaces
         void SentToAll(string message,string userName);
         [OperationContract]
         List<string> GetCurrentUsers();
+        [OperationContract]
+        void AddUser(string fname, string lname, string userName, string Password,DateTime birthday);
     }
 }

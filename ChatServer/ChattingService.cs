@@ -1,11 +1,14 @@
-﻿using System;
+﻿using ChatInterfaces;
+using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using System.Collections.Concurrent;
-using ChatInterfaces;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace ChatServer
 {
@@ -106,5 +109,16 @@ namespace ChatServer
             }
             return listofusers;
         }
+
+        public void AddUser(string fname, string lname, string userName, string Password, DateTime birthday)
+        {
+            
+                SqlConnection conn;
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\App_Data\Chat_DataBase.mdf;Integrated Security=True");
+                string INSERT = "INSERT [dbo].[USERS](Username,Password,First_Name,Last_Name,Birthday) VALUES(" + userName + "," + Password + "," + fname + "," + lname + "," + birthday.Date+")";
+                SqlCommand cmd = new SqlCommand(INSERT, conn);
+                cmd.ExecuteNonQuery();
+             
+            }
     }
 }

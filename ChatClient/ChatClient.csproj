@@ -161,13 +161,6 @@
     <Resource Include="image\images.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Chat_DataBase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\Chat_DataBase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Chat_DataBase.mdf</DependentUpon>
-    </Content>
     <Resource Include="image\wallpaper-website-templates-background-web-click-high-generic2-black-wallm-images-linkworxseo-paper-pictures.jpg" />
   </ItemGroup>
   <ItemGroup>
