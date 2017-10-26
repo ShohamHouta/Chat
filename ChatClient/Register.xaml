@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
-        Title="Register" Height="372.811" Width="462.202" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Title="Register" Height="261.251" Width="462.202" Loaded="Window_Loaded" ResizeMode="NoResize">
+    
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Shoham Houta\Documents\Visual Studio 2017\Projects\Chat\ChatClient\image\wallpaper-website-templates-background-web-click-high-generic2-black-wallm-images-linkworxseo-paper-pictures.jpg"></ImageBrush>
@@ -16,17 +17,10 @@
         <Label Content="Last Name:" HorizontalAlignment="Right" Margin="0,33.013,144.212,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="20.6,103.546,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Password:" Margin="0,99.812,151.268,0" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Right"/>
-        <Label Content="Image:" HorizontalAlignment="Right" Margin="0,151.36,169.674,0" Foreground="White" VerticalAlignment="Top"/>
         <TextBox x:Name="LastNameTextBox" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,34.88,31.212,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Right" Width="108"/>
         <TextBox x:Name="UsernameTextBox" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Margin="101.907,103.546,0,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" Width="108"/>
         <TextBox x:Name="PasswordTextBox" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,99.812,31.212,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Right" Width="108"/>
         <DatePicker x:Name="Birthday" Margin="59.707,178.797,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30.4" Width="127.761"/>
-        <Image x:Name="Image" HorizontalAlignment="Right" Height="129.2" Margin="0,163.998,31.212,0" VerticalAlignment="Top" Width="133.463">
-            <Image.OpacityMask>
-                <ImageBrush/>
-            </Image.OpacityMask>
-        </Image>
-        <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="60,298,0,0" VerticalAlignment="Top" Width="150" Click="RegisterButton_Click"/>
-        <Button x:Name="ImportImage" Content="Browse" Margin="0,298,41.6,0" Height="13.2" VerticalAlignment="Top" HorizontalAlignment="Right" Width="123" Click="ImportImage_Click_1"/>
+        <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="275,179,0,0" VerticalAlignment="Top" Width="150" Click="RegisterButton_Click"/>
     </Grid>
 </Window>

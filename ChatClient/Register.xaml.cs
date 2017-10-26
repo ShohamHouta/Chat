@@ -36,32 +36,24 @@ namespace ChatClient
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            string Insert = "INSERT [dbo].[USERS](Username,Password,First_Name,Last_Name,Birthday,Image) values (@Username,@Password,@First_Name,@Last_Name,@Birthday,@Image)";
+            
             try
             {
+                string Insert = "INSERT [dbo].[USERS](Username,Password,First_Name,Last_Name,Birthday) values (@Username,@Password,@First_Name,@Last_Name,@Birthday)";
                 CMD = new SqlCommand(Insert, conn);
                 CMD.Parameters.AddWithValue("@Username", UsernameTextBox.Text);
                 CMD.Parameters.AddWithValue("@Password", PasswordTextBox.Text);
                 CMD.Parameters.AddWithValue("@First_Name", FirstNameTextBox.Text);
                 CMD.Parameters.AddWithValue("@Last_Name", LastNameTextBox.Text);
-                CMD.Parameters.AddWithValue("@Birthday", Birthday.SelectedDate.ToString());
-                CMD.Parameters.AddWithValue("@Image", Image);
+                CMD.Parameters.AddWithValue("@Birthday", Birthday.SelectedDate);
                 CMD.ExecuteNonQuery();
+                Close();
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void ImportImage_Click_1(object sender, RoutedEventArgs e)
-        {
-
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.ShowDialog();
-            openFile.FileName = "";
-            openFile.Filter = "JPG (*.jpg)|*.jpg|All Files (*.*)|*.*";
-            string path = openFile.FileName.ToString();
-            
-        }
+     
     }
 }
