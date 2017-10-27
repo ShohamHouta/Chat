@@ -53,8 +53,7 @@ namespace ChatServer
             ConnectedClient client = GetMyClient();
             if(client != null)
             {
-                ConnectedClient removedclient;
-                _ConnectedClients.TryRemove(client.UserName, out removedclient);
+                _ConnectedClients.TryRemove(client.UserName, out ConnectedClient removedclient);
 
                 UpdateHelper(1, removedclient.UserName);
 
@@ -110,15 +109,11 @@ namespace ChatServer
             return listofusers;
         }
 
-        public void AddUser(string fname, string lname, string userName, string Password, DateTime birthday)
+        public void AddUser(string fname, string lname, string userName, string Password)
         {
             
-                SqlConnection conn;
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\App_Data\Chat_DataBase.mdf;Integrated Security=True");
-                string INSERT = "INSERT [dbo].[USERS](Username,Password,First_Name,Last_Name,Birthday) VALUES(" + userName + "," + Password + "," + fname + "," + lname + "," + birthday.Date+")";
-                SqlCommand cmd = new SqlCommand(INSERT, conn);
-                cmd.ExecuteNonQuery();
+            
              
-            }
+        }
     }
 }

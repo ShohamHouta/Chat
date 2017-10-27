@@ -36,20 +36,12 @@ namespace ChatClient
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           
+            
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            try {
-                server.AddUser(FirstNameTextBox.Text.ToString(), LastNameTextBox.Text.ToString(), UsernameTextBox.Text.ToString(), PasswordTextBox.Text.ToString(), Birthday.SelectedDate.Value);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            }
-
-     
+           
+        }
     }
 }

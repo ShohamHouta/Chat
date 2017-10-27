@@ -5,22 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
-        Title="Register" Height="261.251" Width="462.202" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Title="Register" Height="243.035" Width="462.202" Loaded="Window_Loaded" ResizeMode="NoResize">
     
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Shoham Houta\Documents\Visual Studio 2017\Projects\Chat\ChatClient\image\wallpaper-website-templates-background-web-click-high-generic2-black-wallm-images-linkworxseo-paper-pictures.jpg"></ImageBrush>
         </Grid.Background>
         <TextBox x:Name="FirstNameTextBox" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Margin="101.907,34.88,0,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" Width="108"/>
-        <Label Content="Birthday:" HorizontalAlignment="Left" Margin="59.707,143.014,0,0" Foreground="White" VerticalAlignment="Top"/>
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="20.6,33.013,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Last Name:" HorizontalAlignment="Right" Margin="0,33.013,144.212,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="20.6,103.546,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Password:" Margin="0,99.812,151.268,0" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Right"/>
         <TextBox x:Name="LastNameTextBox" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,34.88,31.212,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Right" Width="108"/>
         <TextBox x:Name="UsernameTextBox" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Margin="101.907,103.546,0,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" Width="108"/>
-        <TextBox x:Name="PasswordTextBox" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,99.812,31.212,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Right" Width="108"/>
-        <DatePicker x:Name="Birthday" Margin="59.707,178.797,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30.4" Width="127.761"/>
-        <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="275,179,0,0" VerticalAlignment="Top" Width="150" Click="RegisterButton_Click"/>
+        <TextBox x:Name="PasswordTextBox" Height="24"  VerticalAlignment="Top" Margin="0,99.812,31.212,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Right" Width="108"/>
+        <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="155,171,0,0" VerticalAlignment="Top" Width="150" Click="RegisterButton_Click"/>
     </Grid>
 </Window>

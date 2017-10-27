@@ -20,6 +20,6 @@ namespace ChatInterfaces
         [OperationContract]
         List<string> GetCurrentUsers();
         [OperationContract]
-        void AddUser(string fname, string lname, string userName, string Password,DateTime birthday);
+        void AddUser(string fname, string lname, string userName, string Password);
     }
 }
